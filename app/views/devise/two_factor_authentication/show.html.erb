@@ -1,0 +1,13 @@
+<h2>Enter Security Code</h2>
+
+<p><%= flash[:notice] %></p>
+<p>Sorry, we don't recognize the computer or device you're using. Please enter the security code below.</p>
+<%= form_tag([resource_name, :two_factor_authentication], :method => :put) do %>
+  <%= text_field_tag :code %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+<%= link_to "Send me the code", two_factor_code_users_path %> <br/>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+
+

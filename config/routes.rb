@@ -5,4 +5,10 @@ Rails3DeviseRspecCucumber::Application.routes.draw do
   root :to => "home#index"
   devise_for :users
   resources :users
+
+  resources :users, :only => [:two_factor_code]  do 
+    collection do 
+      get :two_factor_code
+    end
+  end
 end

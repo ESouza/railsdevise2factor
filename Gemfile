@@ -18,4 +18,6 @@ gem "devise", ">= 2.2.3"
 gem "quiet_assets", ">= 1.0.2", :group => :development
 gem "figaro", ">= 0.6.3"
 gem "better_errors", ">= 0.7.2", :group => :development
+gem "two_factor_authentication"
+gem "pry"
 gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
